@@ -54,7 +54,7 @@ export default function App() {
   
   return (
     <Routes>
-      <Route path="/" element={<MainApp props={index}/>} />
+      <Route path="/" element={<MainApp props={{index}}/>} />
       <Route path="modal" element={<EntryModal />} />
     </Routes>
   );
