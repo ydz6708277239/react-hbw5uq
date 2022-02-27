@@ -22,13 +22,13 @@ const articles = [
 
 export default function MainApp() {
   let index = 0;
-  const [seconds, setSeconds] = useState(0);
+  // const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds((seconds) => seconds + 1);
+      index++;
       console.log(seconds);
-    }, 1000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
