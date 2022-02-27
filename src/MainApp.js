@@ -22,12 +22,11 @@ const articles = [
 
 export default function MainApp() {
   let index = 0;
-  // const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       index++;
-      console.log(index);
+      console.log(index, article[index]);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
