@@ -50,7 +50,7 @@ export default function App() {
       console.log(index, articles[index % articles.length]);
     }, 4000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
   
   return (
     <Routes>
