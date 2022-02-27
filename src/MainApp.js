@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -15,6 +15,16 @@ let hp = 80;
 const img_link = 'https://images5.alphacoders.com/928/928703.jpg';
 
 export default function MainApp() {
+  let index = 0;
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(seconds => seconds + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Box
       sx={{
