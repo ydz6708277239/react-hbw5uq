@@ -28,6 +28,8 @@ const { useGlobalState } = createGlobalState(initialState);
 
 const userAuth = false;
 
+
+
 // const Counter = () => {
 //   const [avatar_name, setAVName] = useGlobalState('avatar_name');
 //   return (
@@ -42,20 +44,19 @@ const userAuth = false;
 // };
 
 export default function App() {
-  let index = 0;
+  let [idx, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      index++;
-      console.log(index);
+      setState((idx) => idx + 1)
+      console.log(idx);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [index]);
   
   return (
-    <Routes>
-      <Route path="/" element={<MainApp props={{index}}/>} />
-      <Route path="modal" element={<EntryModal />} />
-    </Routes>
+    <div>
+      <MainApp props={{idx}}/>
+    </div>
   );
 }
