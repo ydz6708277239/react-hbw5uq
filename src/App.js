@@ -48,7 +48,7 @@ export default function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setState((idx) => idx + 1)
+      setIndex((idx) => idx + 1)
       console.log(idx);
     }, 4000);
     return () => clearInterval(interval);
