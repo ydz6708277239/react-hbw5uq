@@ -52,7 +52,7 @@ export default function App() {
       console.log(idx);
     }, 4000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
   
   return (
     <div>
