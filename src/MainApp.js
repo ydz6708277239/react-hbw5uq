@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Ticker from 'react-ticker';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -40,7 +39,7 @@ export default function MainApp() {
               color="text.secondary"
               gutterBottom
             >
-              ECOBEAR
+              Welcome, URSA!
             </Typography>
           </CardContent>
         </Card>
