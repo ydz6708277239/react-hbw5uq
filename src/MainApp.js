@@ -14,6 +14,12 @@ let hp = 80;
 
 const img_link = 'https://images5.alphacoders.com/928/928703.jpg';
 
+const articles = [
+  ['volcano eruption in indonesia', -3, 20],
+  ['wildfires rage across California', -2, 40],
+  ['nuclear tests conducted in Pacific waters', -2, 15],
+];
+
 export default function MainApp() {
   let index = 0;
   const [seconds, setSeconds] = useState(0);
@@ -21,7 +27,7 @@ export default function MainApp() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
-      console.log(seconds)
+      console.log(seconds);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -90,7 +96,7 @@ export default function MainApp() {
               ! BREAKING NEWS !
             </Typography>
             <Typography variant="h5" component="div">
-              TERRIBLE NEWS GOES HERE
+              articles[]
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               Absolutely terrible news
