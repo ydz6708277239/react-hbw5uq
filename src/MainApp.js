@@ -26,10 +26,10 @@ export default function MainApp() {
   useEffect(() => {
     const interval = setInterval(() => {
       index++;
-      console.log(index, articles[index]);
+      console.log(index, articles[index % articles.length]);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [index]);
 
   return (
     <Box
@@ -37,6 +37,7 @@ export default function MainApp() {
         width: '100%',
       }}
     >
+      {articles[index][0]}
       <Box
         sx={{
           display: 'grid',
