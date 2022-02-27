@@ -38,7 +38,6 @@ export default function MainApp({props}) {
         width: '100%',
       }}
     >
-      {articles[index][0]}
       <Box
         sx={{
           display: 'grid',
