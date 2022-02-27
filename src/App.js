@@ -16,11 +16,6 @@ export default function App() {
   return (
     <div>
       <MainApp />
-      {/* <Header />
-      <AvatarCard />
-      <br></br>
-      <StatCard />
-      <SideCard /> */}
     </div>
   );
 }
