@@ -44,11 +44,13 @@ const userAuth = false;
 // };
 
 export default function App() {
-  let [idx, setIndex] = useState(0);
+  // let [idx, setIndex] = useState(0);
+  let idx = 0;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((idx) => idx + 1)
+      idx +=1;
+      // setIndex((idx) => idx + 1)
       console.log(idx);
     }, 4000);
     return () => clearInterval(interval);
