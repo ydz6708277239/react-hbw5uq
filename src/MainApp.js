@@ -20,8 +20,8 @@ const articles = [
   ['nuclear tests conducted in Pacific waters', -2, 15],
 ];
 
-export default function MainApp(index) {
-  console.log(index)
+export default function MainApp({props}) {
+  console.log(props.index)
   // let index = 0;
 
   // useEffect(() => {
