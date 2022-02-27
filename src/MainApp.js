@@ -21,7 +21,7 @@ const articles = [
 ];
 
 export default function MainApp({props}) {
-  console.log("props", props.index)
+  console.log("props", props)
   // let index = 0;
 
   // useEffect(() => {
@@ -96,7 +96,7 @@ export default function MainApp({props}) {
               ! BREAKING NEWS !
             </Typography>
             <Typography variant="h5" component="div">
-              {/* {articles[index][0]} */}
+              {articles[index][0]}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               Absolutely terrible news
