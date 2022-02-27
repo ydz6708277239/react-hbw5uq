@@ -16,14 +16,14 @@ const img_link = 'https://images5.alphacoders.com/928/928703.jpg';
 
 export default function MainApp() {
   let index = 0;
-  const [seconds, setSeconds] = useState(0);
+  // const [seconds, setSeconds] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSeconds(seconds => seconds + 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setSeconds((seconds) => seconds + 1);
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <Box

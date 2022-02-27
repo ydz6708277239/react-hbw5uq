@@ -28,18 +28,18 @@ const { useGlobalState } = createGlobalState(initialState);
 
 const userAuth = false;
 
-const Counter = () => {
-  const [avatar_name, setAVName] = useGlobalState('avatar_name');
-  return (
-    <div>
-      <span>Counter: {count}</span>
-      {/* update state by passing callback function */}
-      <button onClick={() => setCount((v) => v + 1)}>+1</button>
-      {/* update state by passing new value */}
-      <button onClick={() => setCount(count - 1)}>-1</button>
-    </div>
-  );
-};
+// const Counter = () => {
+//   const [avatar_name, setAVName] = useGlobalState('avatar_name');
+//   return (
+//     <div>
+//       <span>Counter: {count}</span>
+//       {/* update state by passing callback function */}
+//       <button onClick={() => setCount((v) => v + 1)}>+1</button>
+//       {/* update state by passing new value */}
+//       <button onClick={() => setCount(count - 1)}>-1</button>
+//     </div>
+//   );
+// };
 
 export default function App() {
   return (
