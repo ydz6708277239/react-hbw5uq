@@ -96,7 +96,7 @@ export default function MainApp() {
               ! BREAKING NEWS !
             </Typography>
             <Typography variant="h5" component="div">
-              articles[]
+              {articles[index][0]}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               Absolutely terrible news
