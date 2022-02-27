@@ -50,7 +50,7 @@ export default function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       // idx +=1;
-      setCount((index) =>  index+ 1);
+      setIndex((index) =>  index+ 1);
       // setIndex((idx) => idx + 1);
       console.log(index);
     }, 4000);
