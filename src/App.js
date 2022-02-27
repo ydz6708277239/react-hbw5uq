@@ -22,13 +22,11 @@ const initialState = {
   avatar_name: undefined,
   location: undefined,
   avatar_health: 80,
-  
+  index: 0
 };
 const { useGlobalState } = createGlobalState(initialState);
 
 const userAuth = false;
-
-
 
 // const Counter = () => {
 //   const [avatar_name, setAVName] = useGlobalState('avatar_name');
@@ -44,21 +42,24 @@ const userAuth = false;
 // };
 
 export default function App() {
-  let [idx, setIndex] = useState(0);
+  const [index, setIndex] = useGlobalState('index');
+
+  // let [idx, setIndex] = useState(0);
   // let idx = 0;
 
   useEffect(() => {
     const interval = setInterval(() => {
       // idx +=1;
-      setIndex((idx) => idx + 1)
-      console.log(idx);
+      setCount((index) =>  index+ 1);
+      // setIndex((idx) => idx + 1);
+      console.log(index);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <div>
-      <MainApp props={{idx}}/>
+      <MainApp />
     </div>
   );
 }

@@ -20,8 +20,8 @@ const articles = [
   ['nuclear tests conducted in Pacific waters', -2, 15],
 ];
 
-export default function MainApp({index}) {
-  console.log("props", index)
+export default function MainApp() {
+  // console.log("props", index)
   // let index  = props.index;
   // let index = 0;
 
@@ -97,7 +97,7 @@ export default function MainApp({index}) {
               ! BREAKING NEWS !
             </Typography>
             <Typography variant="h5" component="div">
-              {articles[index][0]}
+              {/* {articles[index][0]} */}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               Absolutely terrible news
