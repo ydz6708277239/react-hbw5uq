@@ -20,16 +20,17 @@ const articles = [
   ['nuclear tests conducted in Pacific waters', -2, 15],
 ];
 
-export default function MainApp() {
-  let index = 0;
+export default function MainApp(index) {
+  console.log(index)
+  // let index = 0;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      index++;
-      console.log(index, articles[index % articles.length]);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [index]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     index++;
+  //     console.log(index, articles[index % articles.length]);
+  //   }, 4000);
+  //   return () => clearInterval(interval);
+  // }, [index]);
 
   return (
     <Box

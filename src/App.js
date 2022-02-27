@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import MainApp from './MainApp';
 import StatCard from './StatCard';
@@ -42,9 +42,19 @@ const userAuth = false;
 // };
 
 export default function App() {
+  let index = 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      index++;
+      console.log(index, articles[index % articles.length]);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [index]);
+  
   return (
     <Routes>
-      <Route path="/" element={<MainApp />} />
+      <Route path="/" element={<MainApp props={index}/>} />
       <Route path="modal" element={<EntryModal />} />
     </Routes>
   );
