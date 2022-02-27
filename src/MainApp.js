@@ -21,7 +21,7 @@ const articles = [
 ];
 
 export default function MainApp({props}) {
-  console.log("props", props)
+  console.log("props", props.index)
   // let index = 0;
 
   // useEffect(() => {
